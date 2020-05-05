@@ -18,16 +18,18 @@ If nothing is returned, you may need to modify BIOS to enable virtualization. Us
 Quick Start instructions for KVM deployments:
 -----
 
-To get started, you need a server running Ubuntu 14.04 (or some similar flavor) with libvirt, kvm and a few python tools.
+To get started, you need a server running Ubuntu 18.04 (or some similar flavor) with libvirt, kvm and a few python tools.
+
+> Note: Wistar works with both Ubuntu 14.04 and 16.04. However, the dependency packages are a little different from the ones listed below.
 
 Install the required Ubuntu packages-
 ```
-root@wistar-build:~# apt-get install python-pip python-dev build-essential qemu-kvm libz-dev libvirt-bin socat python-pexpect python-libvirt libxml2-dev libxslt1-dev unzip bridge-utils genisoimage python-netaddr libffi-dev libssl-dev python-markupsafe libxml2-dev libxslt1-dev git mtools dosfstools
+root@wistar-build:~# apt-get install python3-pip python3-dev build-essential qemu-kvm zlib1g-dev libvirt-bin socat python3-pexpect python3-libvirt libxml2-dev libxslt1-dev unzip bridge-utils genisoimage python3-netaddr libffi-dev libssl-dev python3-markupsafe libxml2-dev libxslt1-dev git mtools dosfstools
 ```
 
-Install Python packages-
+Install Python3 packages-
 ```
-root@wistar-build:~# pip install pyvbox junos-eznc pyYAML Django==1.9.9 cryptography websocket-client
+root@wistar-build:~# pip3 install pyvbox junos-eznc pyYAML Django==1.9.9 cryptography websocket-client
 ```
 
 
