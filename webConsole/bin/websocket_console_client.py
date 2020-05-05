@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # taken from  the excellent http://github.com/larsks/novaconsole.git
 #

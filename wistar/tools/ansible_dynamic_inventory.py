@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # simple script to find parse an exported wistar topology
 # for all the configured virtual machines and generate an ansible inventory
 #

@@ -1,6 +1,6 @@
 # Builds Wistar from git based on an Ubuntu image
 # docker run -d --privileged -p 80:80 -v /opt/wistar/user_images:/opt/wistar/user_images -v /var/run/libvirt:/var/run/libvirt --name wistar01 juniper/wistar
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,13 +9,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 # && echo 'Acquire::HTTPS::Proxy "false";' >> /etc/apt/apt.conf.d/01proxy
 
 RUN apt-get update
-RUN apt-get install -y build-essential libxml2-dev libxslt1-dev libz-dev libffi-dev \
-    libssl-dev python-dev git python-pip
-RUN pip install cryptography junos-eznc jxmlease pyvbox
-RUN apt-get install -y qemu-kvm libvirt-bin socat python-pexpect python-libvirt \
-    python-yaml unzip bridge-utils python-numpy genisoimage python-netaddr \
-    python-markupsafe python-setuptools mtools
-RUN pip install django==1.9.9
+RUN apt-get install -y build-essential libxml2-dev libxslt1-dev zlib1g-dev libffi-dev \
+    libssl-dev python3-dev git python3-pip
+RUN pip3 install cryptography junos-eznc jxmlease pyvbox
+RUN apt-get install -y qemu-kvm libvirt-bin socat python3-pexpect python3-libvirt \
+    python3-yaml unzip bridge-utils python3-numpy genisoimage python3-netaddr \
+    python3-markupsafe python3-setuptools mtools
+RUN pip3 install django==1.9.9
 RUN mkdir -p /opt/wistar/user_images/instances
 RUN mkdir -p /opt/wistar/media
 RUN mkdir -p /opt/wistar/seeds

@@ -51,7 +51,7 @@ def get_console(name):
             ws = os.path.join(path, "../../webConsole/bin/websocket_console_client.py")
             web_socket_path = os.path.abspath(ws)
             # logger.debug("running python %s  %s" % (web_socket_path, ws_url))
-            return pexpect.spawn("python %s %s" % (web_socket_path, ws_url), timeout=60)
+            return pexpect.spawn("python3 %s %s" % (web_socket_path, ws_url), timeout=60)
 
     elif configuration.deployment_backend == "virtualbox":
         return pexpect.spawn("socat /tmp/" + name + ".pipe - ", timeout=60)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # proxy recipe taken from: https://code.activestate.com/recipes/483732-asynchronous-port-forwarding/
 

@@ -806,7 +806,7 @@ def launch_proxy(local_port, remote_port, remote_ip):
 
     wistar_proxy_path = os.path.abspath(ws)
 
-    cmd = "/usr/bin/env python %s --local-port=%s --remote-ip=%s --remote-port=%s &" % (wistar_proxy_path,
+    cmd = "/usr/bin/env python3 %s --local-port=%s --remote-ip=%s --remote-port=%s &" % (wistar_proxy_path,
                                                                     local_port,
                                                                     remote_ip,
                                                                     remote_port)
